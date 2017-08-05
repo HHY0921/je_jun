@@ -1,0 +1,12 @@
+.border{
+	border: 5px solid rgb(225, 0, 3)
+}
+
+body{
+	text-align: center;
+}
+
+.a{
+	width: 100px;
+	height: 50px
+}
