@@ -1,9 +1,6 @@
 var fdb = new ForerunnerDB();
 var db = fdb.db('acco')
 var accoCollection = db.collection('acco')
-
-
-
 accoCollection.load();
 
 
@@ -44,4 +41,12 @@ accoCollection.save();
 	}else{
 
 	}
+}
+
+
+
+
+
+function load() {
+
 }
