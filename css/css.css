@@ -4,7 +4,8 @@
 
 body{
 	text-align: center;
-	background-color: lightblue;
+	
+
 }
 
 .a{
@@ -18,3 +19,6 @@ h1{
 	font-size: 500%;
 }
 
+#b{
+	font-size: 150%;
+}

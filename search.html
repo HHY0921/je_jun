@@ -64,34 +64,36 @@ div {
 			<img src="images/monkey head.png">
 			<br>
 			<br>
-			日期<input id = "a" type="date" name="">
+			<label onclick="myFunctio()" id="b" class="radio-inline"><input type="radio" value="thi" name="op">本月份</label>
+			<label onclick="myFunction()" id="a" class="radio-inline"><input type="radio" value="oth" name="op">指定其他月份</label>
+			<label onclick="myFunctio()" id="b" class="radio-inline"><input type="radio" value="all" name="op">指定全部</label>
+			<br> <br>
 			<br>
-			<br>
-			類別<select id="no">
-				<option value="食" selected>食</option>
-				<option value="衣" selected>衣</option>
-				<option value="住" selected>住</option>
-				<option value="行" selected>行</option>
-				<option value="育" selected>育</option>
-				<option value="樂" selected>樂</option>
-				<option value="" selected>請選擇項目</option>
-				
-				
-			</select>
-			<br>
-			<br>
-			項目<input id = "b" type="text" name ="">
-			<br>
-			<br>
-
+			<input id = "c" class = "as" type="date" name="asd" > 
+			<h>-</h>
+			<input id = "d" class = "as" type="date" name="asd" >
+			 <br>
+			<br> <br>
+			<br> <br>
 			
+			<button class="btn btn-primary btn-lg" id = "search">查詢</button>
 
-			金額<input  id = "c" type="text" name ="">
-			<br>
-			<br>
-			<br>
-			<button id = "sub" type="button" class="btn btn-primary btn-lg">支出!!!</button>
-			<br>
+			<table class="table">
+    <thead>
+      <tr class = "danger">
+        <th>date</th>
+        <th>category</th>
+        <th>item</th>
+         <th>cost</th>
+      </tr>
+    </thead>
+    <tbody id = "accotable">
+     
+    </tbody>
+  </table>
+
+
+  			 <br>
 			<br>
 			<a type="button" class="btn btn-primary btn-lg" href="index.html">back</a>
 			<br><br>
@@ -101,7 +103,7 @@ div {
 			<h6>IHaveNoEmail.NotEmail.com</h6>
 
 
-			<script type="text/javascript" src = js/acco.js></script>
+			<script type="text/javascript" src = js/search.js></script>
 
 		</body>
 	</html>
