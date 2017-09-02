@@ -13,6 +13,14 @@ $("#sub").click(su)
 
 
 function su() {
+
+	if($("#a").val() == "" ||  $("#no").val() == "" || $("#b").val() == "" || $("#c").val() == "" ){
+		alert("部分資料未輸入")
+	}else{
+
+	
+
+
 	var p = confirm("確認支出: 日期:  " + $("#a").val() + ". 類別:  " + $("#no").val() + ".  項目:  " + $("#b").val() + ". 金額" + $("#c").val() + ".")
 	if(p == 1){
 
@@ -41,6 +49,8 @@ accoCollection.save();
 	}else{
 
 	}
+
+}
 }
 
 
