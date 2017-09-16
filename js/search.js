@@ -37,6 +37,18 @@ $("#search").click(function() {
         var dateString = year + "-" + month;
         // console.log(dateString)
         // console.log(dateStrin)
+
+
+
+
+
+
+
+
+        if ($("input[name=op]:checked").val() == 'thi') {
+
+
+
         var Acco = accoCollection.find({
             date: {
                 $gte: dateString,
@@ -44,7 +56,7 @@ $("#search").click(function() {
             }
 
         });
-
+        console.log(Acco)
 
         var ec = 0;
         var sc = 0;
@@ -73,6 +85,7 @@ console.log(ec)
 
         }
             console.log(ec)
+            console.log(bc)
 
             var tc = ec + sc + lc + wc + bc + hc;
             $("#ea").text(ec);
@@ -87,13 +100,12 @@ console.log(ec)
             $("#bb").text(Math.round((bc / tc) * 100) + "%");
             $("#ha").text(hc);
             $("#hb").text(Math.round((hc / tc) * 100) + "%");
-
+            $("#ta").text(tc)
             
         console.log(ec)
 
 
 
-        if ($("input[name=op]:checked").val() == 'thi') {
 
             for (var i = 0; i < Acco.length; i++) {
                 $("#accotable").append(createhtmlstring("info", Acco[i].date, Acco[i].category, Acco[i].item, Acco[i].cost));
@@ -125,6 +137,60 @@ console.log(ec)
 
 
             });
+
+
+             console.log(Acco)
+
+        var ec = 0;
+        var sc = 0;
+        var lc = 0;
+        var wc = 0;
+        var bc = 0;
+        var hc = 0;
+
+console.log(ec)
+
+        for (var i = 0; i < Acco.length; i++) {
+            if (Acco[i].category == "食") {
+                ec += Acco[i].cost / 1;
+            } else if (Acco[i].category == "衣") {
+                sc += Acco[i].cost / 1;
+            } else if (Acco[i].category == "住") {
+                lc += Acco[i].cost / 1;
+            } else if (Acco[i].category == "行") {
+                wc += Acco[i].cost / 1;
+            } else if (Acco[i].category == "育") {
+                bc += Acco[i].cost / 1;
+            } else if (Acco[i].category == "樂") {
+                hc += Acco[i].cost / 1;
+            }
+
+
+        }
+            console.log(ec)
+            console.log(bc)
+
+            var tc = ec + sc + lc + wc + bc + hc;
+            $("#ea").text(ec);
+            $("#eb").text(Math.round((ec / tc) * 100) + "%");
+            $("#sa").text(sc);
+            $("#sb").text(Math.round((sc / tc) * 100) + "%");
+            $("#la").text(lc);
+            $("#lb").text(Math.round((lc / tc) * 100) + "%");
+            $("#wa").text(wc);
+            $("#wb").text(Math.round((wc / tc) * 100) + "%");
+            $("#ba").text(bc);
+            $("#bb").text(Math.round((bc / tc) * 100) + "%");
+            $("#ha").text(hc);
+            $("#hb").text(Math.round((hc / tc) * 100) + "%");
+            $("#ta").text(tc)
+            
+        console.log(ec)
+
+
+
+
+
             for (var i = 0; i < Acco.length; i++) {
                 $("#accotable").append(createhtmlstring("info", Acco[i].date, Acco[i].category, Acco[i].item, Acco[i].cost));
             }
